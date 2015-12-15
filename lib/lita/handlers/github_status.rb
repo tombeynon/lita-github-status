@@ -1,9 +1,9 @@
 module Lita
   module Handlers
     class GithubStatus < Handler
-      route('github status', :status, command: true)
-      route('github status last', :status_last_message, command: true)
-      route('github status messages', :status_messages, command: true)
+      route('github status', :status, command: true, help: { "github status" => "Check current Github status" })
+      route('github status last', :status_last_message, command: true, help: { "github status last" => "Display the last Github status message" })
+      route('github status messages', :status_messages, command: true, help: { "github status messages" => "Display the most recent Github status messages" })
 
       BASE_URL = 'https://status.github.com/api'
 
